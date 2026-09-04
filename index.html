@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interface Gemini</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-top">
+
+            <button class="menu-btn" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="brand">
+                <span class="gemini-star">✦</span>
+                <span>Gemini</span>
+            </div>
+
+        </div>
+
+        <!-- New Chat -->
+        <button class="new-chat">
+            <i class="fa-solid fa-plus"></i>
+            <span>Nouvelle conversation</span>
+        </button>
+
+        <!-- Navigation -->
+        <nav class="navigation">
+
+            <a href="#" class="nav-item active">
+                <i class="fa-regular fa-comment"></i>
+                <span>Conversations</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-regular fa-compass"></i>
+                <span>Explorer</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-regular fa-folder"></i>
+                <span>Fichiers</span>
+            </a>
+
+        </nav>
+
+        <!-- Recent -->
+        <div class="recent-section">
+
+            <div class="recent-title">
+                <span>Récentes</span>
+            </div>
+
+            <a href="#" class="conversation">
+                <i class="fa-regular fa-message"></i>
+                <span>Créer mon site web</span>
+            </a>
+
+            <a href="#" class="conversation">
+                <i class="fa-regular fa-message"></i>
+                <span>Article journalistique</span>
+            </a>
+
+            <a href="#" class="conversation">
+                <i class="fa-regular fa-message"></i>
+                <span>Apprendre JavaScript</span>
+            </a>
+
+            <a href="#" class="conversation">
+                <i class="fa-regular fa-message"></i>
+                <span>Projet web</span>
+            </a>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="sidebar-bottom">
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-gear"></i>
+                <span>Paramètres</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-regular fa-circle-question"></i>
+                <span>Aide</span>
+            </a>
+
+            <div class="user-profile">
+
+                <div class="avatar">
+                    C
+                </div>
+
+                <div class="user-info">
+                    <strong>Coding Club Delmas</strong>
+                    <small>Compte personnel</small>
+                </div>
+
+                <i class="fa-solid fa-ellipsis"></i>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+    <main class="main">
+
+        <!-- Header -->
+        <header class="topbar">
+
+            <div class="mobile-menu">
+                <button class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="top-title">
+                Gemini
+            </div>
+
+            <div class="top-actions">
+
+                <button class="icon-btn" title="Aide">
+                    <i class="fa-regular fa-circle-question"></i>
+                </button>
+
+                <button class="icon-btn" title="Paramètres">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+
+                <div class="top-avatar">
+                    C
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Content -->
+        <section class="content">
+
+            <div class="welcome">
+
+                <div class="welcome-star">
+                    ✦
+                </div>
+
+                <h1>
+                    Bonjour, <span>Coding Club Delmas</span>
+                </h1>
+
+                <p>
+                    Comment puis-je vous aider aujourd'hui ?
+                </p>
+
+            </div>
+
+
+            <!-- Suggestions -->
+            <div class="suggestions">
+
+                <div class="suggestion-card">
+
+                    <div class="suggestion-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <div>
+                        <strong>Créer du code</strong>
+                        <p>Construire un site web moderne</p>
+                    </div>
+
+                </div>
+
+
+                <div class="suggestion-card">
+
+                    <div class="suggestion-icon">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+
+                    <div>
+                        <strong>Écrire</strong>
+                        <p>Créer ou améliorer un texte</p>
+                    </div>
+
+                </div>
+
+
+                <div class="suggestion-card">
+
+                    <div class="suggestion-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+
+                    <div>
+                        <strong>Brainstormer</strong>
+                        <p>Trouver de nouvelles idées</p>
+                    </div>
+
+                </div>
+
+
+                <div class="suggestion-card">
+
+                    <div class="suggestion-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+
+                    <div>
+                        <strong>Apprendre</strong>
+                        <p>Comprendre un nouveau sujet</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Chat Input -->
+            <div class="chat-area">
+
+                <div class="input-box">
+
+                    <textarea
+                        placeholder="Saisissez un message à Gemini..."
+                        rows="1"></textarea>
+
+
+                    <div class="input-actions">
+
+                        <div class="left-actions">
+
+                            <button title="Joindre un fichier">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                            <button title="Importer une image">
+                                <i class="fa-regular fa-image"></i>
+                            </button>
+
+                            <button title="Microphone">
+                                <i class="fa-solid fa-microphone"></i>
+                            </button>
+
+                        </div>
+
+
+                        <button class="send-btn">
+                            <i class="fa-solid fa-arrow-up"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="disclaimer">
+                    Gemini peut faire des erreurs. Vérifiez les informations importantes.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script>
+
+const menuBtn = document.getElementById("menuBtn");
+const sidebar = document.getElementById("sidebar");
+
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("collapsed");
+});
+
+</script>
+
+</body>
+</html>
