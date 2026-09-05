@@ -1,126 +1,189 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Interface Gemini</title>
+    <title>Gemini</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Icons -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
 <div class="app">
 
-    <!-- =========================
+    <!-- =====================================================
          SIDEBAR
-    ========================== -->
+    ====================================================== -->
+
     <aside class="sidebar" id="sidebar">
 
-        <div class="sidebar-top">
+        <!-- HEADER -->
 
-            <button class="menu-btn" id="menuBtn">
-                <i class="fa-solid fa-bars"></i>
+        <div class="sidebar-header">
+
+            <div class="gemini-brand">
+                <span class="gemini-star">✦</span>
+                <span class="gemini-name">Gemini</span>
+            </div>
+
+            <!-- Bouton réduire -->
+            <button
+                type="button"
+                class="sidebar-close"
+                id="sidebarClose"
+                title="Réduire la barre latérale"
+                aria-label="Réduire la barre latérale">
+
+                <i class="fa-solid fa-chevron-left"></i>
+
             </button>
 
-            <div class="brand">
-                <span class="gemini-star">✦</span>
-                <span>Gemini</span>
+        </div>
+
+
+        <!-- =================================================
+             SIDEBAR MAIN
+        ================================================== -->
+
+        <div class="sidebar-main">
+
+            <!-- Nouvelle discussion -->
+
+            <button
+                type="button"
+                class="new-chat"
+                title="Nouvelle discussion">
+
+                <i class="fa-solid fa-plus"></i>
+
+                <span>Nouvelle discussion</span>
+
+            </button>
+
+
+            <!-- Navigation -->
+
+            <nav class="navigation">
+
+                <a
+                    href="#"
+                    class="nav-item active"
+                    title="Recherchez dans les nouvelles discussions">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <span>
+                        Recherchez dans les nouvelles discussions
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="nav-item"
+                    title="Image">
+
+                    <i class="fa-regular fa-image"></i>
+
+                    <span>Image</span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="nav-item"
+                    title="Bibliothèque">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <span>Bibliothèque</span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- =================================================
+                 NOTEBOOKS
+            ================================================== -->
+
+            <div class="notebooks-section">
+
+                <div class="section-title">
+                    <span>Notebooks</span>
+                </div>
+
+                <a
+                    href="#"
+                    class="nav-item notebook-item"
+                    title="Notebooks">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    <span>Notebooks</span>
+
+                </a>
+
             </div>
 
         </div>
 
-        <!-- New Chat -->
-        <button class="new-chat">
-            <i class="fa-solid fa-plus"></i>
-            <span>Nouvelle conversation</span>
-        </button>
 
-        <!-- Navigation -->
-        <nav class="navigation">
+        <!-- =================================================
+             SIDEBAR BOTTOM
+        ================================================== -->
 
-            <a href="#" class="nav-item active">
-                <i class="fa-regular fa-comment"></i>
-                <span>Conversations</span>
-            </a>
-
-            <a href="#" class="nav-item">
-                <i class="fa-regular fa-compass"></i>
-                <span>Explorer</span>
-            </a>
-
-            <a href="#" class="nav-item">
-                <i class="fa-regular fa-folder"></i>
-                <span>Fichiers</span>
-            </a>
-
-        </nav>
-
-        <!-- Recent -->
-        <div class="recent-section">
-
-            <div class="recent-title">
-                <span>Récentes</span>
-            </div>
-
-            <a href="#" class="conversation">
-                <i class="fa-regular fa-message"></i>
-                <span>Créer mon site web</span>
-            </a>
-
-            <a href="#" class="conversation">
-                <i class="fa-regular fa-message"></i>
-                <span>Article journalistique</span>
-            </a>
-
-            <a href="#" class="conversation">
-                <i class="fa-regular fa-message"></i>
-                <span>Apprendre JavaScript</span>
-            </a>
-
-            <a href="#" class="conversation">
-                <i class="fa-regular fa-message"></i>
-                <span>Projet web</span>
-            </a>
-
-        </div>
-
-        <!-- Bottom -->
         <div class="sidebar-bottom">
 
-            <a href="#" class="nav-item">
-                <i class="fa-solid fa-gear"></i>
-                <span>Paramètres</span>
-            </a>
+            <div class="account-row">
 
-            <a href="#" class="nav-item">
-                <i class="fa-regular fa-circle-question"></i>
-                <span>Aide</span>
-            </a>
+                <div
+                    class="account-info"
+                    title="Compte">
 
-            <div class="user-profile">
+                    <div class="account-icon">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
 
-                <div class="avatar">
-                    C
+                    <div class="account-text">
+
+                        <strong>Compte</strong>
+
+                        <small>Compte personnel</small>
+
+                    </div>
+
                 </div>
 
-                <div class="user-info">
-                    <strong>Coding Club Delmas</strong>
-                    <small>Compte personnel</small>
-                </div>
 
-                <i class="fa-solid fa-ellipsis"></i>
+                <button
+                    type="button"
+                    class="settings-btn"
+                    title="Paramètres"
+                    aria-label="Paramètres">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </button>
 
             </div>
 
@@ -129,164 +192,158 @@
     </aside>
 
 
-    <!-- =========================
+    <!-- =====================================================
          MAIN
-    ========================== -->
+    ====================================================== -->
+
     <main class="main">
 
-        <!-- Header -->
+        <!-- TOPBAR -->
+
         <header class="topbar">
 
-            <div class="mobile-menu">
-                <button class="menu-btn">
+            <div class="top-left">
+
+                <!-- Bouton pour rouvrir -->
+
+                <button
+                    type="button"
+                    class="menu-btn"
+                    id="menuBtn"
+                    title="Ouvrir la barre latérale"
+                    aria-label="Ouvrir la barre latérale">
+
                     <i class="fa-solid fa-bars"></i>
+
                 </button>
+
+
+                <!-- Logo mobile -->
+
+                <div class="mobile-brand">
+
+                    <span class="gemini-star">✦</span>
+
+                    <span>Gemini</span>
+
+                </div>
+
             </div>
 
-            <div class="top-title">
-                Gemini
-            </div>
+
+            <!-- ACTIONS -->
 
             <div class="top-actions">
 
-                <button class="icon-btn" title="Aide">
-                    <i class="fa-regular fa-circle-question"></i>
+                <button
+                    type="button"
+                    class="upgrade-btn"
+                    title="Mettre à niveau">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <span>Mettre à niveau</span>
+
                 </button>
 
-                <button class="icon-btn" title="Paramètres">
-                    <i class="fa-solid fa-gear"></i>
-                </button>
 
-                <div class="top-avatar">
-                    C
-                </div>
+                <button
+                    type="button"
+                    class="temporary-chat"
+                    title="Activer les discussions temporaires"
+                    aria-label="Activer les discussions temporaires">
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                </button>
 
             </div>
 
         </header>
 
 
-        <!-- Content -->
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
         <section class="content">
 
             <div class="welcome">
 
-                <div class="welcome-star">
-                    ✦
-                </div>
-
                 <h1>
-                    Bonjour, <span>Coding Club Delmas</span>
+                    Comment puis-je vous aider,
+                    <span>Coding Club Delmas</span> ?
                 </h1>
 
-                <p>
-                    Comment puis-je vous aider aujourd'hui ?
-                </p>
-
             </div>
 
 
-            <!-- Suggestions -->
-            <div class="suggestions">
+            <!-- CHAT -->
 
-                <div class="suggestion-card">
-
-                    <div class="suggestion-icon">
-                        <i class="fa-solid fa-code"></i>
-                    </div>
-
-                    <div>
-                        <strong>Créer du code</strong>
-                        <p>Construire un site web moderne</p>
-                    </div>
-
-                </div>
-
-
-                <div class="suggestion-card">
-
-                    <div class="suggestion-icon">
-                        <i class="fa-solid fa-pen-nib"></i>
-                    </div>
-
-                    <div>
-                        <strong>Écrire</strong>
-                        <p>Créer ou améliorer un texte</p>
-                    </div>
-
-                </div>
-
-
-                <div class="suggestion-card">
-
-                    <div class="suggestion-icon">
-                        <i class="fa-solid fa-lightbulb"></i>
-                    </div>
-
-                    <div>
-                        <strong>Brainstormer</strong>
-                        <p>Trouver de nouvelles idées</p>
-                    </div>
-
-                </div>
-
-
-                <div class="suggestion-card">
-
-                    <div class="suggestion-icon">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
-
-                    <div>
-                        <strong>Apprendre</strong>
-                        <p>Comprendre un nouveau sujet</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Chat Input -->
             <div class="chat-area">
 
                 <div class="input-box">
 
-                    <textarea
-                        placeholder="Saisissez un message à Gemini..."
-                        rows="1"></textarea>
+                    <div class="input-row">
+
+                        <!-- + -->
+
+                        <button
+                            type="button"
+                            class="add-btn"
+                            title="Ajouter"
+                            aria-label="Ajouter">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
 
 
-                    <div class="input-actions">
+                        <!-- TEXTE -->
 
-                        <div class="left-actions">
-
-                            <button title="Joindre un fichier">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
-
-                            <button title="Importer une image">
-                                <i class="fa-regular fa-image"></i>
-                            </button>
-
-                            <button title="Microphone">
-                                <i class="fa-solid fa-microphone"></i>
-                            </button>
-
-                        </div>
+                        <textarea
+                            id="messageInput"
+                            placeholder="Demander à Gemini"
+                            rows="1"></textarea>
 
 
-                        <button class="send-btn">
-                            <i class="fa-solid fa-arrow-up"></i>
+                        <!-- MODELE -->
+
+                        <button
+                            type="button"
+                            class="model-selector"
+                            title="Choisir le modèle">
+
+                            <span>Flash-lite</span>
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </button>
+
+
+                        <!-- MICRO -->
+
+                        <button
+                            type="button"
+                            class="mic-btn"
+                            title="Microphone"
+                            aria-label="Microphone">
+
+                            <i class="fa-solid fa-microphone"></i>
+
                         </button>
 
                     </div>
 
                 </div>
 
-                <div class="disclaimer">
-                    Gemini peut faire des erreurs. Vérifiez les informations importantes.
-                </div>
+
+                <p class="disclaimer">
+
+                    Gemini peut faire des erreurs.
+                    Vérifiez ses réponses.
+
+                </p>
 
             </div>
 
@@ -297,13 +354,159 @@
 </div>
 
 
+<!-- =========================================================
+     OVERLAY MOBILE
+========================================================== -->
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay">
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================== -->
+
 <script>
 
-const menuBtn = document.getElementById("menuBtn");
-const sidebar = document.getElementById("sidebar");
+document.addEventListener("DOMContentLoaded", function () {
 
-menuBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("collapsed");
+    const sidebar = document.getElementById("sidebar");
+    const sidebarClose = document.getElementById("sidebarClose");
+    const menuBtn = document.getElementById("menuBtn");
+    const overlay = document.getElementById("sidebarOverlay");
+    const textarea = document.getElementById("messageInput");
+
+
+    /* =====================================================
+       FONCTION : OUVRIR
+    ====================================================== */
+
+    function openSidebar() {
+
+        sidebar.classList.remove("collapsed");
+        sidebar.classList.add("open");
+
+        if (window.innerWidth <= 700) {
+            overlay.classList.add("show");
+        }
+
+    }
+
+
+    /* =====================================================
+       FONCTION : FERMER / RÉDUIRE
+    ====================================================== */
+
+    function closeSidebar() {
+
+        sidebar.classList.remove("open");
+        sidebar.classList.add("collapsed");
+
+        overlay.classList.remove("show");
+
+    }
+
+
+    /* =====================================================
+       BOUTON ☰
+    ====================================================== */
+
+    if (menuBtn) {
+
+        menuBtn.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+            openSidebar();
+
+        });
+
+    }
+
+
+    /* =====================================================
+       BOUTON ‹
+    ====================================================== */
+
+    if (sidebarClose) {
+
+        sidebarClose.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+            event.stopPropagation();
+
+            closeSidebar();
+
+        });
+
+    }
+
+
+    /* =====================================================
+       OVERLAY
+    ====================================================== */
+
+    if (overlay) {
+
+        overlay.addEventListener("click", function () {
+
+            closeSidebar();
+
+        });
+
+    }
+
+
+    /* =====================================================
+       ESCAPE
+    ====================================================== */
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+
+            closeSidebar();
+
+        }
+
+    });
+
+
+    /* =====================================================
+       TEXTAREA AUTO RESIZE
+    ====================================================== */
+
+    if (textarea) {
+
+        textarea.addEventListener("input", function () {
+
+            this.style.height = "auto";
+
+            this.style.height =
+                Math.min(this.scrollHeight, 180) + "px";
+
+        });
+
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+    ====================================================== */
+
+    window.addEventListener("resize", function () {
+
+        if (window.innerWidth > 700) {
+
+            overlay.classList.remove("show");
+
+        }
+
+    });
+
 });
 
 </script>
